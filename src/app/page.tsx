@@ -187,7 +187,7 @@ export default function Home() {
               Follow Our X Handle To Stay Updated and Participate in Discussions about the Future of Truth Verification.
             </p>
             <a
-              href="https://x.com/"
+              href="https://x.com/councilofagi?s=21"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
