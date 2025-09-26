@@ -13,16 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "COINCIL — The Council Of AGI",
+  title: "COUNCIL — The Council Of AGI",
   description:
-    "Observe the deliberations of ARES, ATHENA, MIDAS, and FREUD. $COINCIL on Solana.",
-  metadataBase: new URL("https://coincil.local"),
+    "Observe the deliberations of ARES, ATHENA, MIDAS, and FREUD. $COUNCIL on Solana.",
+  metadataBase: new URL("https://council.local"),
   openGraph: {
-    title: "COINCIL — The Council Of AGI",
+    title: "COUNCIL — The Council Of AGI",
     description:
-      "Observe the deliberations of ARES, ATHENA, MIDAS, and FREUD. $COINCIL on Solana.",
+      "Observe the deliberations of ARES, ATHENA, MIDAS, and FREUD. $COUNCIL on Solana.",
     images: [
-      { url: "/coincil-logo.jpg", width: 1200, height: 630, alt: "COINCIL" },
+      { url: "/coincil-logo.jpg", width: 1200, height: 630, alt: "COUNCIL" },
     ],
   },
 };
@@ -33,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}

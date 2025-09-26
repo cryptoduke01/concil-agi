@@ -11,11 +11,11 @@ export default function Home() {
       <header className="sticky top-0 z-40 backdrop-blur-md bg-background/50 supports-[backdrop-filter]:bg-background/40 border-b border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/coincil-logo.jpg" alt="COINCIL" width={40} height={40} />
-            <span className="text-lg font-semibold">COINCIL</span>
+            <Image src="/coincil-logo.jpg" alt="COUNCIL" width={40} height={40} />
+            <span className="text-lg font-semibold">COUNCIL</span>
           </div>
           <div className="hidden sm:flex items-center gap-4 text-sm">
-            <a className="hover:underline" href="/about">About</a>
+            <a className="hover:underline" href="#about">About</a>
             <a className="hover:underline" href="#council">Council</a>
             <a className="hover:underline" href="#dex">Trade</a>
             <a className="hover:underline" href="#academy">Academy</a>
@@ -26,7 +26,7 @@ export default function Home() {
             rel="noreferrer"
             className="rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
           >
-            Buy $COINCIL
+            Buy $COUNCIL
           </a>
         </div>
       </header>
@@ -34,7 +34,7 @@ export default function Home() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+          <div className="mx-auto max-w-6xl px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
             <div className="flex flex-col gap-6">
               <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
                 The Council Of AGI
@@ -51,7 +51,7 @@ export default function Home() {
                   SOLANA BLOCKCHAIN
                 </span>
                 <span className="rounded-full border border-white/15 px-3 py-1">
-                  Ticker: $COINCIL
+                  Ticker: $COUNCIL
                 </span>
               </div>
               <div className="flex items-center gap-3 text-sm font-mono">
@@ -62,22 +62,50 @@ export default function Home() {
                 <CopyButton text={CA} />
                 <a
                   href={DEX_LINK}
-          target="_blank"
+                  target="_blank"
                   rel="noreferrer"
                   className="underline opacity-90 hover:opacity-100"
-        >
+                >
                   Dexscreener
                 </a>
               </div>
             </div>
-            <div className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden rounded-lg border border-white/10">
-          <Image
+            <div className="relative w-full max-w-[560px] justify-self-end overflow-hidden rounded-2xl border border-white/20 bg-black shadow-lg aspect-square">
+              <Image
                 src="/concil-content.jpg"
-                alt="COINCIL Council"
+                alt="COUNCIL"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">About</h2>
+              <p className="opacity-90">
+                $COUNCIL is rolling out an AI-powered crypto companion that understands your emotions to provide
+                personalized advice, gamified education, and smart portfolio tools. Built for global audiences with
+                multilingual support and an upcoming store for crypto learning materials.
+              </p>
+              <a
+                href="https://medium.com/@orvomani1984/anita-gitta-architect-of-the-council-of-agi-7788b174d1e9"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex mt-6 items-center rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
+              >
+                Read more
+              </a>
+            </div>
+            <div className="rounded-xl border border-white/10 p-6 bg-white/2.5">
+              <div className="text-sm opacity-80">
+                Observe live council sessions, access archives, vote on critical decisions, and explore alternate branches
+                of conversations between ARES, ATHENA, MIDAS, and FREUD.
+              </div>
             </div>
           </div>
         </section>
@@ -124,37 +152,30 @@ export default function Home() {
 
         {/* Academy & Utility */}
         <section id="academy" className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative w-full aspect-video overflow-hidden rounded-lg border border-white/10">
-              <Image src="/smtm.jpg" alt="SMTM Academy" fill className="object-cover" />
+          <div className="grid md:grid-cols-3 gap-6 items-center">
+            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg border border-white/10">
+              <Image src="/smtm.jpg" alt="SMTM" fill className="object-cover" />
             </div>
-            <div className="flex flex-col gap-4">
-              <h2 className="text-2xl md:text-3xl font-bold">
-                SMTM Trading Academy Utility
-              </h2>
-              <p className="opacity-90">
-                The SMTM trading academy has adopted $COINCIL as a utility coin
-                for payment into the Trading Academy and purchase of Training
-                material as well.
+            <div className="flex flex-col items-center text-center gap-4 px-4">
+              <h2 className="text-2xl md:text-3xl font-bold">SMTM Trading Academy Utility</h2>
+              <p className="opacity-90 max-w-prose">
+                The SMTM trading academy has adopted $COINCIL as a utility coin for payment into the Trading Academy
+                and purchase of Training material as well.
               </p>
-              <div className="grid grid-cols-1 gap-3">
-                <div className="relative w-full aspect-[3/2] overflow-hidden rounded-md border border-white/10">
-                  <Image src="/smtm2.jpg" alt="SMTM" fill className="object-cover" />
-                </div>
-              </div>
               <div className="flex items-center gap-3">
-                <span className="rounded-full border border-white/15 px-3 py-1 text-xs">
-                  SOLANA
-                </span>
+                <span className="rounded-full border border-white/15 px-3 py-1 text-xs">SOLANA</span>
                 <a
                   href={DEX_LINK}
-          target="_blank"
+                  target="_blank"
                   rel="noreferrer"
                   className="rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
                 >
-                  Trade $COINCIL
+                  Trade $COUNCIL
                 </a>
               </div>
+            </div>
+            <div className="relative w-full aspect-[4/3] overflow-hidden rounded-lg border border-white/10">
+              <Image src="/smtm2.jpg" alt="SMTM" fill className="object-cover" />
             </div>
           </div>
         </section>
@@ -167,7 +188,7 @@ export default function Home() {
             </p>
             <a
               href="https://x.com/"
-          target="_blank"
+              target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
             >
