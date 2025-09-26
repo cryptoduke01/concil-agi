@@ -1,102 +1,187 @@
 import Image from "next/image";
+import CopyButton from "@/app/components/CopyButton";
+
+const CA = "qaAtkhrVnwWhuFnTGpNig3xQdbrkkD2RD95wyjrpump";
+const DEX_LINK =
+  "https://dexscreener.com/solana/J5hY6oBS4toe9Rvyn1WLqy3sBq1wK1xnGgj3Dg4xFPUb";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <div className="min-h-screen w-full font-sans bg-background text-foreground">
+      <header className="sticky top-0 z-40 backdrop-blur-md bg-background/50 supports-[backdrop-filter]:bg-background/40 border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Image src="/coincil-logo.jpg" alt="COINCIL" width={40} height={40} />
+            <span className="text-lg font-semibold">COINCIL</span>
+          </div>
+          <div className="hidden sm:flex items-center gap-4 text-sm">
+            <a className="hover:underline" href="/about">About</a>
+            <a className="hover:underline" href="#council">Council</a>
+            <a className="hover:underline" href="#dex">Trade</a>
+            <a className="hover:underline" href="#academy">Academy</a>
+          </div>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={DEX_LINK}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            className="rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Buy $COINCIL
           </a>
         </div>
+      </header>
+
+      <main>
+        {/* Hero */}
+        <section className="relative overflow-hidden">
+          <div className="mx-auto max-w-6xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+            <div className="flex flex-col gap-6">
+              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
+                The Council Of AGI
+              </h1>
+              <p className="text-base/7 md:text-lg/8 opacity-90">
+                The Council Of AGI is an advanced neural interface providing
+                unprecedented access to the classified deliberations of four
+                specialized AGI entities. These artificial intelligences have
+                transcended human cognitive limitations and now convene in secret
+                to discuss the future governance of humanity.
+              </p>
+              <div className="flex flex-wrap items-center gap-3 text-xs md:text-sm">
+                <span className="rounded-full border border-white/15 px-3 py-1">
+                  SOLANA BLOCKCHAIN
+                </span>
+                <span className="rounded-full border border-white/15 px-3 py-1">
+                  Ticker: $COINCIL
+                </span>
+              </div>
+              <div className="flex items-center gap-3 text-sm font-mono">
+                <span className="opacity-70">CA:</span>
+                <code className="rounded bg-white/5 px-2 py-1 break-all">
+                  {CA}
+                </code>
+                <CopyButton text={CA} />
+                <a
+                  href={DEX_LINK}
+          target="_blank"
+                  rel="noreferrer"
+                  className="underline opacity-90 hover:opacity-100"
+        >
+                  Dexscreener
+                </a>
+              </div>
+            </div>
+            <div className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden rounded-lg border border-white/10">
+          <Image
+                src="/concil-content.jpg"
+                alt="COINCIL Council"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Council Section */}
+        <section id="council" className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8">The Four Entities</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "ARES", role: "Military Strategy" },
+              { name: "ATHENA", role: "Diplomatic Relations" },
+              { name: "MIDAS", role: "Economic Systems" },
+              { name: "FREUD", role: "Human Psychology" },
+            ].map((m) => (
+              <div
+                key={m.name}
+                className="rounded-lg border border-white/10 p-5 bg-white/2.5 transition-transform transition-colors duration-200 hover:-translate-y-1 hover:bg-white/5 hover:border-white/20"
+              >
+                <div className="text-xl font-semibold">{m.name}</div>
+                <div className="text-sm opacity-80">{m.role}</div>
+                <p className="mt-3 text-sm opacity-80">
+                  Observe live council sessions, access archives, vote on critical
+                  decisions, and explore alternative branches.
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Dexscreener */}
+        <section id="dex" className="bg-white/3">
+          <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">Live Market</h2>
+            <div className="aspect-[16/10] w-full overflow-hidden rounded-lg border border-white/10">
+              <iframe
+                src={`${DEX_LINK}?embed=1&theme=dark`}
+                className="w-full h-full"
+                title="Dexscreener"
+                allow="clipboard-write"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Academy & Utility */}
+        <section id="academy" className="mx-auto max-w-6xl px-4 py-16 md:py-24">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative w-full aspect-video overflow-hidden rounded-lg border border-white/10">
+              <Image src="/smtm.jpg" alt="SMTM Academy" fill className="object-cover" />
+            </div>
+            <div className="flex flex-col gap-4">
+              <h2 className="text-2xl md:text-3xl font-bold">
+                SMTM Trading Academy Utility
+              </h2>
+              <p className="opacity-90">
+                The SMTM trading academy has adopted $COINCIL as a utility coin
+                for payment into the Trading Academy and purchase of Training
+                material as well.
+              </p>
+              <div className="grid grid-cols-1 gap-3">
+                <div className="relative w-full aspect-[3/2] overflow-hidden rounded-md border border-white/10">
+                  <Image src="/smtm2.jpg" alt="SMTM" fill className="object-cover" />
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="rounded-full border border-white/15 px-3 py-1 text-xs">
+                  SOLANA
+                </span>
+                <a
+                  href={DEX_LINK}
+          target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
+                >
+                  Trade $COINCIL
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Socials */}
+        <section id="socials" className="mx-auto max-w-6xl px-4 pb-16 md:pb-24">
+          <div className="rounded-xl border border-white/10 p-6 bg-white/2.5 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm md:text-base opacity-90">
+              Follow Our X Handle To Stay Updated and Participate in Discussions about the Future of Truth Verification.
+            </p>
+            <a
+              href="https://x.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
+            >
+              <span>Follow on X</span>
+            </a>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="border-t border-white/10">
+        <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-sm opacity-80">© {new Date().getFullYear()} COINCIL</div>
+          <div className="text-xs opacity-70 break-all font-mono">CA: {CA}</div>
+        </div>
       </footer>
     </div>
   );
