@@ -200,7 +200,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm opacity-80">© {new Date().getFullYear()} COINCIL</div>
+          <div className="text-sm opacity-80">© {new Date().getFullYear()} COUNCIL</div>
           <div className="text-xs opacity-70 break-all font-mono">CA: {CA}</div>
         </div>
       </footer>
