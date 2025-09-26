@@ -167,7 +167,7 @@ export default function Home() {
             </p>
             <a
               href="https://x.com/"
-              target="_blank"
+          target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
             >
